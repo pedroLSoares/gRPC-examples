@@ -1,0 +1,12 @@
+message NewSumRequest {
+  required float a = 1;
+  required float b = 2;
+}
+
+message NewSumResponse {
+  optional float result = 1;
+}
+
+service MathService {
+  rpc Sum (NewSumRequest) returns (NewSumResponse) {};
+}
